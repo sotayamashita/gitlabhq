@@ -9,7 +9,9 @@
     "karma-coverage": "BABEL_ENV=coverage karma start config/karma.config.js --single-run",
     "karma-start": "karma start config/karma.config.js",
     "webpack": "webpack --config config/webpack.config.js",
-    "webpack-prod": "NODE_ENV=production webpack --config config/webpack.config.js"
+    "webpack-prod": "NODE_ENV=production webpack --config config/webpack.config.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "babel-core": "^6.22.1",
@@ -52,7 +54,8 @@
     "vue-resource": "^0.9.3",
     "vue-template-compiler": "^2.2.6",
     "webpack": "^2.3.3",
-    "webpack-bundle-analyzer": "^2.3.0"
+    "webpack-bundle-analyzer": "^2.3.0",
+    "snyk": "^1.47.0"
   },
   "devDependencies": {
     "babel-plugin-istanbul": "^4.0.0",
@@ -75,5 +78,6 @@
     "karma-webpack": "^2.0.2",
     "nodemon": "^1.11.0",
     "webpack-dev-server": "^2.4.2"
-  }
+  },
+  "snyk": true
 }
